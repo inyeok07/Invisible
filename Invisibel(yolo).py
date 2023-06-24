@@ -25,6 +25,8 @@ while webcam.isOpened():
     bboxs, labels, confidences = model.decode_predictions(preds)[0]
 
     if status:
+
+
         k_label =str([COCO_LABELS[i] for i in labels.numpy().tolist()])
         re_label = k_label.replace('x','')
         print(re_label)
